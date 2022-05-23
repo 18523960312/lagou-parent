@@ -1,0 +1,17 @@
+server:
+  port: 8765
+spring:
+  application:
+    name: eurake-server
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #这个是用来查找注册表的,本身作为服务注册中心,不需要获取
+    fetch-registry: false
+    service-url:
+      #这个是用来设置服务注册中心的地址
+      defaultZore: http://${eureka.instance.hostname}:${server.port}/eureka/
+    #本身就是服务器不需要进行注册进去
+    register-with-eureka: false
+
