@@ -3,7 +3,7 @@ spring:
     name: lagou-cloud-eureka-server
 
 server:
-  port: 8761
+  port: 8765
 eureka:
   instance:
     hostname: LagouCloudEurekaServerA
@@ -13,4 +13,4 @@ eureka:
    # service-url:
    #   defaultZone: http://LagouCloudEurekaServerB:8762/eureka
     service-url:
-      defaultZone: http://localhost:8762/eureka/
+      defaultZone: http://localhost:8766/eureka/
