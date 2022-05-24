@@ -1,17 +1,16 @@
-server:
-  port: 8765
 spring:
   application:
-    name: eurake-server
+    name: lagou-cloud-eureka-server
+
+server:
+  port: 8761
 eureka:
   instance:
-    hostname: localhost
+    hostname: LagouCloudEurekaServerA
   client:
-    #这个是用来查找注册表的,本身作为服务注册中心,不需要获取
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
+   # service-url:
+   #   defaultZone: http://LagouCloudEurekaServerB:8762/eureka
     service-url:
-      #这个是用来设置服务注册中心的地址
-      defaultZore: http://${eureka.instance.hostname}:${server.port}/eureka/
-    #本身就是服务器不需要进行注册进去
-    register-with-eureka: false
-
+      defaultZone: http://localhost:8762/eureka/

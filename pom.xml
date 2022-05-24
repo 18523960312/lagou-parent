@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>lagou-eurake-server-8765</module>
+        <module>lagou-eureka-server-8766</module>
     </modules>
 
     <!-- 设置父该工程为pom工程 -->
