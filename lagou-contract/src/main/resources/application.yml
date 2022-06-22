@@ -1,0 +1,12 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: lagou-contract
+eureka:
+  instance:
+    hostname: lagou-contract-9001
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8765/eureka/,http://localhost:8766/eureka  #这里必须要写域名不能写别的

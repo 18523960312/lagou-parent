@@ -1,0 +1,29 @@
+server:
+  port: 8767 #端口
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8766/eureka/,http://localhost:8765/eureka/ #eureka server的url
+  instance:
+    ip-address: true #使用ip进行注册
+    instance-id: ${spring.cl}
+
+spring:
+  application:
+    name: lagou-cloud-gateway
+  cloud:
+    gateway:
+      routes: # 路由可以有多个
+       - id: service-autodeliver-router # 我们⾃定义的路由 ID，保持唯⼀
+         uri: http://127.0.0.1:8096 # ⽬标服务地址 ⾃动投递微服务（部署多实例） 动态路由：uri配置的应该是⼀个服务名称，⽽不应该是⼀个具体的服务实例的地址
+            # gateway⽹关从服务注册中⼼获取实例信息然后负载后路由
+         predicates: # 断⾔：路由条件，Predicate 接受⼀个输⼊参数，返回⼀个布尔值结果。该接⼝包含多种默 认⽅法来将Predicate 组合成其他复杂的逻辑（⽐如：与，或，⾮）。- Path=/autodeliver/**
+       - id: service-resume-router # 我们⾃定义的路由 ID，保持唯⼀
+         uri: http://127.0.0.1:8081 # ⽬标服务地址
+         #http://localhost:9002/resume/openstate/1545132
+         #http://127.0.0.1:8081/openstate/1545132
+         predicates: # 断⾔：路由条件，Predicate 接受⼀个输⼊参数，返回⼀个布尔值结果。该接⼝包含多种默 认⽅法来将Predicate 组合成其他复杂的逻辑（⽐如：与，或，⾮）。
+            - Path=/resume/**
+         filters:
+            - StripPrefix=1
