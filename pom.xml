@@ -10,7 +10,6 @@
     <modules>
         <module>lagou-eurake-server-8765</module>
         <module>lagou-eureka-server-8766</module>
-        <module>lagou-cloud-gateway-8767</module>
         <module>lagou-contract</module>
         <module>lagou-customer</module>
         <module>lagou-contract-9002</module>
