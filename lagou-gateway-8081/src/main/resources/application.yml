@@ -1,0 +1,24 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: lagou-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: lagou_contract
+          #uri: http://127.0.0.1:9002
+          uri: lb://lagou-contract
+          predicates:
+            - Path=/contract/**
+
+eureka:
+  instance:
+    hostname: lagou-gateway-8081
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8765/eureka/,http://localhost:8766/eureka  #这里必须要写域名不能写别的
