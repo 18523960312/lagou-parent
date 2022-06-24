@@ -1,0 +1,22 @@
+server:
+  port: 8091
+eureka:
+  instance:
+    hostname: lagou-config-8091
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8765/eureka/,http://localhost:8766/eureka  #这里必须要写域名不能写别的
+spring:
+  application:
+    name: lagou-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/18523960312/config.git
+          username: szy18523960312@163.com
+          password: Suzhiyi520520
+          search-paths:
+            - config
+      label: main
