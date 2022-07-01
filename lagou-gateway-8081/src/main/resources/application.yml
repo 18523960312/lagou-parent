@@ -14,6 +14,14 @@ spring:
           uri: lb://lagou-contract
           predicates:
             - Path=/contract/**
+          filters:
+            - StripPrefix=1  #这个是去掉上面匹配的路径一位!!!!
+        - id: lagou-customer
+          uri: http://127.0.0.1:9010
+          predicates:
+            - Path=/customer/**
+          filters:
+            - StripPrefix=1
 
 eureka:
   instance:

@@ -1,0 +1,10 @@
+server:
+  port: 9011
+
+spring:
+  application:
+    name: lagou-customer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://10.253.130.23:8848/

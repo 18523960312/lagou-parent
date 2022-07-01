@@ -13,6 +13,8 @@
         <module>lagou-contract</module>
         <module>lagou-customer</module>
         <module>lagou-contract-9002</module>
+        <module>lagou-config-8091</module>
+        <module>lagou-customer-9011-nacos</module>
     </modules>
 
     <!-- 设置父该工程为pom工程 -->
@@ -35,6 +37,16 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!--SCA -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.1.0.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--SCA -->
         </dependencies>
     </dependencyManagement>
 
@@ -99,6 +111,8 @@
             <version>1.1.1</version>
         </dependency>
         <!--引⼊Jaxb，结束-->
+
+
     </dependencies>
 
     <build>

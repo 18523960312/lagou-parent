@@ -1,0 +1,24 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: lagou-customer
+  cloud:  #如果要从配置中心获取信息加以下的东西
+    config:
+      name: lagou-customer #配置文件的前缀
+      profile: dev #配置文件中的后面(表示为那个环境)
+      label: main #那个分支
+      uri: http://localhost:8091 #配置中心server的地址
+eureka:
+  instance:
+    hostname: lagou-customer
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8765/eureka/,http://localhost:8766/eureka  #这里必须要写域名不能写别的
+
+#链路追踪
+logging:
+  level:
+    org.springframework.web.servlet.DispatcherServlet: debug
+    org.springframework.cloud.sleuth: debug
