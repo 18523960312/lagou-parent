@@ -3,6 +3,10 @@ server:
 spring:
   application:
     name: lagou-contract
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/springbootdata?serverTimezone=UTC
 eureka:
   instance:
     hostname: lagou-contract-9001
