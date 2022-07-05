@@ -15,6 +15,8 @@
         <module>lagou-contract-9002</module>
         <module>lagou-config-8091</module>
         <module>lagou-customer-9011-nacos</module>
+        <module>lagou-contract-9003-nacos</module>
+        <module>lagou-customer-9012-nacos</module>
     </modules>
 
     <!-- 设置父该工程为pom工程 -->

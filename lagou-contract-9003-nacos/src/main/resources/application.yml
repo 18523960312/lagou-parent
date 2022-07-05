@@ -1,9 +1,9 @@
 server:
-  port: 9011
+  port: 9003
 
 spring:
   application:
-    name: lagou-customer
+    name: lagou-contract
   cloud:
     nacos:
       discovery:
