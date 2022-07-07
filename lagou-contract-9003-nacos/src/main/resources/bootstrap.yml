@@ -13,3 +13,13 @@ spring:
         server-addr: http://10.253.130.23:8848
         namespace: 73b9840a-ead1-449e-84f5-cc85c9106b8e
         file-extension: yaml
+  datasource:
+    url: jdbc:mysql://10.253.129.121:3306/yhjr_loan?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false&allowMultiQueries=true
+    username: sit_dba
+    password: yhjr20191107&^%
+  redis:
+    host: 127.0.0.1
+    port: 6379
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #驼峰命名
