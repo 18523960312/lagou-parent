@@ -17,6 +17,7 @@
         <module>lagou-customer-9011-nacos</module>
         <module>lagou-contract-9003-nacos</module>
         <module>lagou-customer-9012-nacos</module>
+        <module>lagou-sharding-jdbc-9100</module>
     </modules>
 
     <!-- 设置父该工程为pom工程 -->
@@ -49,6 +50,12 @@
                 <scope>import</scope>
             </dependency>
             <!--SCA -->
+
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+                <version>4.1.1</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
