@@ -5,4 +5,8 @@
     <insert id="addUserInfo" parameterType="com.lagou.pojo.UserInfo">
         insert into user_info (name,sex) values(#{name},#{sex})
     </insert>
+
+    <select id="queryUserInfoList" resultType="com.lagou.pojo.UserInfo">
+        select * from user_info
+    </select>
 </mapper>

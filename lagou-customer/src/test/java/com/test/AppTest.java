@@ -36,4 +36,37 @@ public class AppTest {
             System.out.println(s);
         }
     }
+
+    /**
+     * 1.将数组中的0放到末尾
+     * [0,123,3,0,987,1]
+     */
+    public static void main1(String[] args) {
+        int[] nums = new int[]{0,123,3,0,987,1};
+        int[] anInt = getInt(nums);
+        for (int i = 0; i < anInt.length; i++) {
+            System.out.println(anInt[i]);
+        }
+    }
+
+    private static int[] getInt(int[] nums){
+        int i = 0;
+        for ( int num:nums ) {
+            if(num!=0){
+                nums[i++]=num;
+            }
+        }
+
+        while(i<nums.length){
+            nums[i++]=0;
+        }
+        return nums;
+    }
+
+    public static void main(String[] args) {
+        int oldCapacity = 8;
+        int newCapacityold= oldCapacity >> 1;
+        int newCapacity = oldCapacity + (oldCapacity >> 1);
+        System.out.println(newCapacityold+"==="+newCapacity);
+    }
 }
