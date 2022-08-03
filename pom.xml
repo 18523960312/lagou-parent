@@ -19,6 +19,7 @@
         <module>lagou-customer-9012-nacos</module>
         <module>lagou-sharding-jdbc-9100</module>
         <module>lagou-rabbitmq-product-9200</module>
+        <module>lagou-rabbitmq-consumer-9201</module>
     </modules>
 
     <!-- 设置父该工程为pom工程 -->
