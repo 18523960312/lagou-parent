@@ -20,6 +20,11 @@
         <module>lagou-sharding-jdbc-9100</module>
         <module>lagou-rabbitmq-product-9200</module>
         <module>lagou-rabbitmq-consumer-9201</module>
+        <module>lagou-zookeeper-7001</module>
+        <module>lagou-dubbo-provider-7101</module>
+        <module>lagou-dubbo-api</module>
+        <module>lagou-dubbo-provider-7101</module>
+        <module>lagou-dubbo-consumer-7102</module>
     </modules>
 
     <!-- 设置父该工程为pom工程 -->
@@ -53,10 +58,18 @@
             </dependency>
             <!--SCA -->
 
+            <!-- shardingJDBC -->
             <dependency>
                 <groupId>org.apache.shardingsphere</groupId>
                 <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
                 <version>4.1.1</version>
+            </dependency>
+
+            <!-- dubbo的引用 -->
+            <dependency>
+                <groupId>com.alibaba.spring.boot</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>2.0.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
